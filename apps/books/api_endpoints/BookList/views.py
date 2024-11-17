@@ -6,3 +6,4 @@ from rest_framework import permissions
 class BookListAPIView(ListAPIView):
     queryset = Book.objects.all()
     serializer_class = BookListModelSerializer
+    permission_classes = (permissions.IsAuthenticated,)

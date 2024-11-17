@@ -8,8 +8,8 @@ class UserLoginAPIView(GenericAPIView):
     def post(self, request, *args, **kwargs):
         data = self.serializer_class(data=request.data, context={"request": request})  
         if data.is_valid():
-            data.save()
-            return Response({"message": "all is ok"})
+            response = data.save()
+            return Response(response)
         return Response(data.errors, status=status.HTTP_400_BAD_REQUEST)
     
 __all__ = ['UserLoginAPIView']

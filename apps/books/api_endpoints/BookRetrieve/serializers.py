@@ -6,4 +6,4 @@ class BookRetrieveModelSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Book
-        fields = ("title", "description", "cover", "author", "price")
+        fields = ("title", "description", "cover", "price", "author")

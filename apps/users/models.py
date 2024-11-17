@@ -12,3 +12,8 @@ class User(AbstractUser):
     class Meta:
         verbose_name = _("User")
         verbose_name_plural = _("Users")
+        
+class CartItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    book = models.ForeignKey("books.Book", on_delete=models.CASCADE)
+    quantity = models.IntegerField()
