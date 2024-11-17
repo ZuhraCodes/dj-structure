@@ -8,6 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("api/v1/books/", include("apps.books.urls")),
     path("api/v1/users/", include("apps.users.urls")),
+    path("api/v1/cart/", include("apps.sales.urls")),
     path("swagger/", include("core.scheme"))
 ]
 urlpatterns += urlpatterns
