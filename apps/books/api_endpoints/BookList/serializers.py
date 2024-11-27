@@ -4,11 +4,12 @@ from apps.sales.models import OrderItem
 from django.db.models import Sum
 
 class BookReviewModelSerializer(serializers.ModelSerializer):
-    # user = serializers.CharField(source="user.first_name")
+    user = serializers.CharField(source="user.first_name")
+    book = serializers.CharField(source="book.title")
     
     class Meta:
         model = BookReview
-        fields = ("rate", )
+        fields = ("rate",  "book", "user")
 
 class BookListModelSerializer(serializers.ModelSerializer):
     author = serializers.CharField(source="author.full_name")
