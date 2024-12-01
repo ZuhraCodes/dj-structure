@@ -21,7 +21,8 @@ ALLOWED_HOSTS = [
     'localhost',
     '45.137.148.70',
     'api.ipify.org',
-    'www.shadowserver.org'
+    'www.shadowserver.org',
+    'academy.fzmz.uz' 
 ]
 
 
